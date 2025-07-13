@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky jet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <!-- Анимированные облака на фоне -->
+    <div class="clouds-container">
+        <img class="obloko" src="images/obl.svg" alt="cloud">
+        <img class="obloko2" src="images/obl.svg" alt="cloud">
+    </div>
+
+    <!-- Логотипы сверху -->
+    <div class="header">
+        <img class="logo-1win" src="images/1win_logo.png" alt="1win logo">
+        <img class="logo-luckyjet" src="images/Lucky.svg" alt="LUCKYJET logo">
+    </div>
+
+    <!-- Основной блок, включающий игру и панель управления -->
+    <div class="main-content">
+        <!-- Блок с iframe игры -->
+        <div class="game-container">
+            <iframe id="myIframe" src="https://1play.gamedev-tech.cc/lucky/vgs/?b=demo&language=en&ish=1" scrolling="no"></iframe>
+        </div>
+
+        <!-- Блок для вывода сигнала "Waiting..." или результата -->
+        <div class="signal-box">
+            <span id="signalText">Waiting...</span>
+        </div>
+
+        <!-- Контейнер для кнопок -->
+        <div class="button-container">
+            <button id="getSignalBtn" class="btn">Get Signal</button>
+            <button class="btn" onclick="window.location.href='https://kzshtr.github.io/old/';">Back to menu</button>
+        </div>
+    </div>
+
+    <!-- ИЗМЕНЕНИЕ: Добавлена HTML-структура для TG уведомления -->
+    <div id="notification-container" class="notification-container">
+        <a href="https://t.me/tripX_bot" target="_blank" class="liquid-crystal-bubble">
+            <div class="notification-content">
+                <div class="icon-container">
+                    <img src="tg.png" alt="Telegram">
+                </div>
+                <span class="notification-text" id="notification-username"></span>
+            </div>
+        </a>
+        <div class="crystal-reflection">
+            <div class="liquid-crystal-bubble"></div>
+        </div>
+    </div>
+    <!-- КОНЕЦ БЛОКА УВЕДОМЛЕНИЯ -->
+
+    <script src="script.js"></script>
+</body>
+</html>
